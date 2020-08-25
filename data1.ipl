@@ -1,0 +1,55 @@
+data@[Defendants1:"LI Xiaoyu", Defendants2:"Dong Jiahi"]
+where
+	dimension year: {2010 to 2020};
+	dimension victim:{"V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", 
+		"V15", "V16", "V17", "V18", "V19", "V20", "V21", "V22", "V23", "V24", "V25"};
+	dimension data:{"trade_secrets", "intelectual_property", "valuable_business_information"};
+	dimension evidence:{"web_shell_program", "malicious_program", "credential_stealing_software");
+	
+evidential statement es_data={os_web_shell_program, os_malicious_program, os_credential_stealing_software};
+
+observation sequence os_web_shell_program =
+{
+	([victim:"V2", month:"JAN", year:2015, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V4", month:"APR", year:2015, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V5", month:"SEP", year:2015, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V10", month:"FEB", year:2019, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V11", month:"FEB", year:2019, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V22", month:"JUN", year:2019, stolen:"trade_secrets"], 1, 0, 1.0),
+};
+
+observation sequence os_malicious_program =
+{
+	([victim:"V3",month:"MAR", year:2015, stolen:"valuable_business_information"], 1, 0, 1.0),
+	
+};
+observation sequence os_credential_stealing_software =
+{
+	([victim:"V1", month:"DEC", year:2014, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V2", month:"JAN", year:2015, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V3", month:"MAR", year:2015, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V4", month:"APR", year:2015, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V5", month:"SEP", year:2015, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V6", month:"MAR", year:2017, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V7", month:"MAR", year:2018, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V8", month:"APR", year:2018, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V9", month:"NOV", year:2018, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V10", month:"FEB", year:2019, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V11", month:"FEB", year:2019, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V12", month:"FEB", year:2019, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V13", month:"MAR", year:2019, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V14", month:"FEB", year:2016, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V15", month:"MAR", year:2017, stolen:"valuable_business_information"], 1, 0, 1.0),
+	([victim:"V16", month:"APR", year:2017, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V17", month:"MAY", year:2017, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V18", month:"APR", year:2017, stolen:"trade_secrets"], 1, 0, 1.0),
+	([victim:"V19", month:"MAR", year:2019, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V20", month:"FEB", year:2019, stolen:"valuable_business_information"], 1,
+	([victim:"V21", month:"APR", year:2019, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V23", month:"JAN", year:2020, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V24", month:"MAR", year:2017, stolen:"intelectual_property"], 1, 0, 1.0),
+	([victim:"V25", month:"APR", year:2020, stolen:"valuable_business_information"], 1, 0, 1.0),
+	
+};
+
+end	
